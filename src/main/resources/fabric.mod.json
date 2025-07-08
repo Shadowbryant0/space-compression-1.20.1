@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "space-compression",
+	"version": "${version}",
+	"name": "space compression",
+	"description": "Compress items using Runic magic!",
+	"authors": [
+		"ShadowBryant0"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "ARR",
+	"icon": "assets/space-compression/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.shadow.spacecompression.SpaceCompression"
+		],
+		"client": [
+			"net.shadow.spacecompression.SpaceCompressionClient"
+		],
+		"fabric-datagen": [
+			"net.shadow.spacecompression.SpaceCompressionDataGenerator"
+		]
+	},
+	"mixins": [
+		"space-compression.mixins.json",
+		{
+			"config": "space-compression.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
