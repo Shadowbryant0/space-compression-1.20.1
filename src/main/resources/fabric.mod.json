@@ -26,11 +26,8 @@
 		]
 	},
 	"mixins": [
-		"space-compression.mixins.json",
-		{
-			"config": "space-compression.client.mixins.json",
-			"environment": "client"
-		}
+		"space-compression.mixins.json"
+
 	],
 	"depends": {
 		"fabricloader": ">=0.16.14",
